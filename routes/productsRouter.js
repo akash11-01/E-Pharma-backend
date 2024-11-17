@@ -6,6 +6,7 @@ import { isValidId } from "../middlewares/isValidId.js";
 const productsRouter = express.Router();
 
 productsRouter.get("/", productsControllers.getAllProducts);
+productsRouter.post("/create", productsControllers.createProduct);
 productsRouter.get("/:id", isValidId, productsControllers.getOneProduct);
 
 export default productsRouter;

@@ -1,7 +1,12 @@
 import { httpError } from "../helpers/httpError.js";
 import { ctrlWrapper } from "../helpers/ctrlWrapper.js";
 import { getProductById, listProducts } from "../services/productsServices.js";
+import { Product } from "../models/Product.js";
 
+const createProduct = async (req, res) => {
+  const product = await Product.create(req.body);
+  res.json(product);
+};
 const getAllProducts = async (req, res) => {
   const { page = 1, limit = 10, name, category, stock } = req.query;
   const filter = {};
@@ -39,4 +44,5 @@ const getOneProduct = async (req, res) => {
 export default {
   getAllProducts: ctrlWrapper(getAllProducts),
   getOneProduct: ctrlWrapper(getOneProduct),
+  createProduct: ctrlWrapper(createProduct),
 };
