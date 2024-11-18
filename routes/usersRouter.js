@@ -17,21 +17,22 @@ usersRouter.post(
   usersControllers.registerUser
 );
 
-// usersRouter.post(
-//   "/verify-email",
-//   // validateBody(refreshUserSchema),
-//   usersControllers.verifyEmail
-// );
-// usersRouter.post(
-//   "/forgot-password",
-//   // validateBody(refreshUserSchema),
-//   usersControllers.forgotPassword
-// );
-// usersRouter.post(
-//   "/reset-password/:token",
-//   // validateBody(refreshUserSchema),
-//   usersControllers.resetPassword
-// );
+usersRouter.post(
+  "/verify-email",
+  // validateBody(refreshUserSchema),
+  usersControllers.verifyEmail
+);
+
+usersRouter.post(
+  "/forgot-password",
+  // validateBody(refreshUserSchema),
+  usersControllers.forgotPassword
+);
+usersRouter.post(
+  "/reset-password/:token",
+  // validateBody(refreshUserSchema),
+  usersControllers.resetPassword
+);
 
 usersRouter.post(
   "/login",
