@@ -15,7 +15,12 @@ const { DB_HOST, PORT = 3000 } = process.env;
 export const app = express();
 
 app.use(morgan("tiny"));
-app.use(cors({}));
+app.use(
+  cors({
+    origin: ["http://localhost:5173", "https://easy-pharm.netlify.app"],
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 app.use("/api/users", usersRouter);
