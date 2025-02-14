@@ -18,7 +18,7 @@ The backend is responsible for handling user authentication, managing pharmacy-r
 ## Installation & Setup
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/akash11-01/E-Pharma-backend
+   git clone https://github.com/akash11-01/E-Pharma-backend.git
    cd epharmacy-backend
    ```
 2. **Install dependencies:**
